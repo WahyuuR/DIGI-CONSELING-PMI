@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <style>
+      #footer-placeholder {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: -120px;
+      }
       .navbar {
         background-color: #fff;
         height: 80px;
@@ -60,46 +66,9 @@
         Kirim Pertanyaan
       </button>
     </div>
+    <div id="footer-placeholder"></div>
 
-    <script>
-      const questionsAndAnswers = {
-        "Bagaimana cara saya untuk memperpanjang Pasport":
-          "Unutk melakukan perpanjangan pasport anda bisa langsung menuju ke loket ....",
-        "Apa itu CSS?":
-          "CSS adalah bahasa yang digunakan untuk mendesain halaman web.",
-        "Apa itu JavaScript?":
-          "JavaScript adalah bahasa pemrograman yang digunakan untuk membuat interaksi pada halaman web.",
-      };
-
-      const chatbox = document.getElementById("chatbox");
-      const questionSelect = document.getElementById("questionSelect");
-
-      Object.keys(questionsAndAnswers).forEach((question) => {
-        const option = document.createElement("option");
-        option.value = question;
-        option.textContent = question;
-        questionSelect.appendChild(option);
-      });
-
-      function sendQuestion() {
-        const selectedQuestion = questionSelect.value;
-        if (selectedQuestion !== "Pilih pertanyaan...") {
-          appendMessage(selectedQuestion, "user-message");
-          setTimeout(() => {
-            const answer = questionsAndAnswers[selectedQuestion];
-            appendMessage(answer, "bot-message");
-          }, 35); // Delay untuk simulasi jawaban
-        }
-      }
-
-      function appendMessage(message, className) {
-        const messageDiv = document.createElement("div");
-        messageDiv.className = `chat-entry ${className}`;
-        messageDiv.textContent = message;
-        chatbox.appendChild(messageDiv);
-        chatbox.scrollTop = chatbox.scrollHeight; // Scroll ke pesan terbaru
-      }
-    </script>
+    <script src="/publik/js/loketdisnakertrans.js"></script>
     <script src="/publik/js/loadComponent.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   </body>

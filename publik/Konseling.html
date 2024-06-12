@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+      #chatbox {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 50px;
+      }
+      .box-loket {
+        margin-top: 120px;
+      }
+      .chat-entry {
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: white;
+      }
+      .whatsapp-button {
+        text-decoration: none;
+        color: white;
+        background-color: #25D366;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: block;
+        margin-top: 10px;
+      }
+      #counselors {
+        width: 29%; /* Atur lebar kolom konselor */
+      }
+      #counselorInfo {
+        width: 70%; /* Atur lebar kolom informasi konselor */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container box-loket">
+      <h2>Loket Konseling</h2>
+      <div id="chatbox">
+        <div id="counselors" class="d-flex flex-column">
+          <!-- Nama konselor akan diisi oleh JavaScript -->
+        </div>
+        <div id="counselorInfo" class="d-flex flex-column">
+          <!-- Informasi konselor akan diisi oleh JavaScript -->
+        </div>
+      </div>
+    </div>
+    <script src="js/konseling.js"></script>
+ 
+  </body>
+</html>
