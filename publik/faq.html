@@ -51,11 +51,14 @@
         text-align: left;
         background-color: #fefefe;
       }
+      .box-chat {
+        margin-top: 120px;
+      }
     </style>
   </head>
   <nav id="nav"></nav>
   <body>
-    <div class="container mt-5">
+    <div class="container box-chat">
       <h2>Chat Bot Interaktif</h2>
       <div id="chatbox" class="mb-3"></div>
       <select id="questionSelect" class="form-control mb-2">
@@ -69,7 +72,7 @@
     <div id="footer-placeholder"></div>
 
     <!-- <script src="/publik/js/loketdisnakertrans.js"></script> -->
-    <!-- <script src="/publik/js/loadComponent.js"></script> -->
+    <script src="/publik/js/loadComponent.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const questionsAndAnswers = {
@@ -98,7 +101,7 @@
           setTimeout(() => {
             const answer = questionsAndAnswers[selectedQuestion];
             appendMessage(answer, "bot-message");
-          }, 500); // Delay untuk simulasi jawaban
+          }, 50); // Delay untuk simulasi jawaban
         }
       }
 
@@ -108,8 +111,6 @@
         messageDiv.innerHTML = message; // Ubah dari textContent menjadi innerHTML
         chatbox.appendChild(messageDiv);
         chatbox.scrollTop = chatbox.scrollHeight; // Scroll ke pesan terbaru
-
-        
       }
     </script>
   </body>
