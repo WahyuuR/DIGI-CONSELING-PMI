@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <title>Chat Bot</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
     <style>
       #chatbox {
         display: flex;
@@ -14,29 +18,24 @@
         border-radius: 8px;
         margin-top: 50px;
       }
+      #questions {
+        width: 30%;
+      }
+      #answers {
+        width: 65%;
+        border-left: 2px solid #ddd;
+        padding-left: 20px;
+      }
+
       .box-loket {
         margin-top: 120px;
       }
+
       .chat-entry {
         margin-bottom: 10px;
         padding: 8px;
         border-radius: 8px;
         background-color: white;
-      }
-      .whatsapp-button {
-        text-decoration: none;
-        color: white;
-        background-color: #25D366;
-        padding: 10px 20px;
-        border-radius: 5px;
-        display: block;
-        margin-top: 10px;
-      }
-      #counselors {
-        width: 29%; /* Atur lebar kolom konselor */
-      }
-      #counselorInfo {
-        width: 70%; /* Atur lebar kolom informasi konselor */
       }
       .navbar {
         background-color: #fff;
@@ -56,7 +55,7 @@
         box-shadow: none;
         outline: none;
       }
-         #footer-placeholder {
+      #footer-placeholder {
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -64,25 +63,22 @@
       }
     </style>
   </head>
+  <nav id="nav"></nav>
   <body>
-    <nav id="nav"></nav>
     <div class="container box-loket">
-      <h2>Daftar Konselor</h2>
-      
+      <h2>Loket 1 Disnakertrans</h2>
       <div id="chatbox">
-        <div id="counselors" class="d-flex flex-column">
-          <!-- Nama konselor akan diisi oleh JavaScript -->
+        <div id="questions" class="d-flex flex-column">
+          <!-- Pertanyaan akan diisi oleh JavaScript -->
         </div>
-        <div id="counselorInfo" class="d-flex flex-column">
-          <!-- Informasi konselor akan diisi oleh JavaScript -->
+        <div id="answers" class="d-flex flex-column">
+          <!-- Jawaban akan diisi oleh JavaScript -->
         </div>
       </div>
-      <h6 class="mt-3">Silahkan untuk membuat janji konseling dengan konselor yang tersedia pada saat jam kerja.</h6>
     </div>
-    <footer id="footer-placeholder"></footer>
-    <script src="js/konseling.js"></script>
+    <div id="footer-placeholder"></div>
+    <script src="/publik/js/lokteDisnaklertrans.js"></script>
     <script src="/publik/js/loadComponent.js"></script>
     <script src="/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
- 
   </body>
 </html>
