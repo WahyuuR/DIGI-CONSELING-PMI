@@ -59,7 +59,7 @@
     <!-- login -->
     <div class="form-login-container">
       <h3 class="text-center mb-4">Login</h3>
-      <form action="/login" method="post">
+      <form id="loginForm">
         <div class="form-group">
           <label class="label" for="username">Username</label>
           <input
@@ -90,9 +90,31 @@
       <div class="container text-light text-center">
         <p class="display-5 mb-3">SIDIG-PMI</p>
         <small class="text-white-50"
-          >&copy;Copyright by Unitomo. All rights reserved.</small
-        >
+          >&copy;Copyright by Unitomo. All rights reserved.</small>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Ambil nilai username dan password dari form
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Validasi username dan password (ini hanya contoh, sesuaikan dengan kebutuhan Anda)
+          const validUsername = "admin";
+          const validPassword = "admin";
+
+          if (username === validUsername && password === validPassword) {
+            // Jika login berhasil, arahkan ke halaman lain
+            window.location.href = "/publik/admin.html";
+          } else {
+            // Jika login gagal, tampilkan pesan error
+            alert("Username atau password salah!");
+          }
+        });
+    </script>
   </body>
 </html>
